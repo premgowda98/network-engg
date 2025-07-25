@@ -1,0 +1,132 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host example.com:443 was resolved.
+* IPv6: 2600:1406:3a00:21::173e:2e66, 2600:1406:bc00:53::b81e:94c8, 2600:1408:ec00:36::1736:7f31, 2600:1406:bc00:53::b81e:94ce, 2600:1408:ec00:36::1736:7f24, 2600:1406:3a00:21::173e:2e65
+* IPv4: 23.192.228.80, 96.7.128.175, 23.192.228.84, 23.215.0.136, 23.215.0.138, 96.7.128.198
+*   Trying 23.192.228.80:443...
+*   Trying [2600:1406:3a00:21::173e:2e66]:443...
+* Immediate connect fail for 2600:1406:3a00:21::173e:2e66: Network is unreachable
+*   Trying [2600:1406:bc00:53::b81e:94c8]:443...
+* Immediate connect fail for 2600:1406:bc00:53::b81e:94c8: Network is unreachable
+*   Trying [2600:1408:ec00:36::1736:7f31]:443...
+* Immediate connect fail for 2600:1408:ec00:36::1736:7f31: Network is unreachable
+*   Trying [2600:1406:bc00:53::b81e:94ce]:443...
+* Immediate connect fail for 2600:1406:bc00:53::b81e:94ce: Network is unreachable
+*   Trying [2600:1408:ec00:36::1736:7f24]:443...
+* Immediate connect fail for 2600:1408:ec00:36::1736:7f24: Network is unreachable
+*   Trying [2600:1406:3a00:21::173e:2e65]:443...
+* Immediate connect fail for 2600:1406:3a00:21::173e:2e65: Network is unreachable
+* Connected to example.com (23.192.228.80) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [29 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [2350 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [80 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / X25519 / id-ecPublicKey
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: C=US; ST=California; L=Los Angeles; O=Internet Corporation for Assigned Names and Numbers; CN=*.example.com
+*  start date: Jan 15 00:00:00 2025 GMT
+*  expire date: Jan 15 23:59:59 2026 GMT
+*  subjectAltName: host "example.com" matched cert's "example.com"
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G3 TLS ECC SHA384 2020 CA1
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 1: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+} [5 bytes data]
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://example.com/
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: example.com]
+* [HTTP/2] [1] [:path: /]
+* [HTTP/2] [1] [user-agent: curl/8.5.0]
+* [HTTP/2] [1] [accept: */*]
+} [5 bytes data]
+> GET / HTTP/2
+> Host: example.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+> 
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [249 bytes data]
+* old SSL session ID is stale, removing
+{ [5 bytes data]
+< HTTP/2 200 
+< content-type: text/html
+< etag: "84238dfc8092e5d9c0dac8ef93371a07:1736799080.121134"
+< last-modified: Mon, 13 Jan 2025 20:11:20 GMT
+< cache-control: max-age=2802
+< date: Fri, 25 Jul 2025 03:46:22 GMT
+< alt-svc: h3=":443"; ma=93600,h3-29=":443"; ma=93600
+< content-length: 1256
+< 
+{ [1256 bytes data]
+100  1256  100  1256    0     0   1508      0 --:--:-- --:--:-- --:--:--  1507100  1256  100  1256    0     0   1507      0 --:--:-- --:--:-- --:--:--  1507
+* Connection #0 to host example.com left intact
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>

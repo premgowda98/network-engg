@@ -1,0 +1,18 @@
+*   Trying 127.0.0.1:58080...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to (nil) (127.0.0.1) port 58080 (#0)
+* ALPN, offering http/1.1
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+* TLSv1.0 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.0 (OUT), TLS header, Unknown (21):
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS alert, decode error (562):
+} [2 bytes data]
+* error:0A000126:SSL routines::unexpected eof while reading
+* Closing connection 0
+curl: (35) error:0A000126:SSL routines::unexpected eof while reading

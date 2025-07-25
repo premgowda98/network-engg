@@ -1,0 +1,8 @@
+services:
+  mitmproxy:
+    image: mitmproxy/mitmproxy
+    command: mitmweb --web-host 0.0.0.0 --set web_password=mypassword
+    network_mode: host
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
